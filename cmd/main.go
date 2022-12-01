@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	cfg := config.Load(".")
+	cfg := config.Load("./")
 
 	psqlUrl := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 		cfg.PostConfig.Host,
@@ -22,8 +22,6 @@ func main() {
 		cfg.PostConfig.Password,
 		cfg.PostConfig.Database,
 	)
-
-	fmt.Print(cfg,"-0-------------------<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>\n")
 	psqlConn, err := sqlx.Connect("postgres", psqlUrl)
 	if err != nil {
 		log.Fatalf("failed to connect database: %v", err)

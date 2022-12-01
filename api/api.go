@@ -17,9 +17,9 @@ type RouterOptions struct {
 	InMemory storage.InMemoryStorageI
 }
 
-// @title           Swagger for blog api
+// @title          ToDoApp 
 // @version         1.0
-// @description     This is a blog service api.
+// @description     This is a to do app
 // @host      localhost:8000
 // @BasePath  /v1
 // @securityDefinitions.apikey ApiKeyAuth

@@ -32,7 +32,7 @@ type Smtp struct {
 }
 
 func Load(path string) Config {
-	gotenv.Load(".env")
+	gotenv.Load(path+"/.env")
 	Conf := viper.New()
 	Conf.AutomaticEnv()
 	cfg := Config{
